@@ -1,6 +1,27 @@
 import java.util.*;
+import java.text.DateFormat;
+import java.text.SimpleDateFormat;
+import java.util.Date;
+import java.util.Calendar;
+
 
 public class App {
+
+        // This is a class called Getdate
+        static class Getdate {
+
+            // it has a member variable constant for the format string
+            public static final String FORMAT = "yyyy-MM-dd hh:mm:ss";
+    
+            // it has a member function that returns the date as a string
+            public String getDateString() {
+                Date date = Calendar.getInstance().getTime();
+                DateFormat dateFormat = new SimpleDateFormat(FORMAT);
+                return dateFormat.format(date);
+            }
+        }
+    
+
 
     public static class Raceschedule {
         Scanner s = new Scanner(System.in);
@@ -37,13 +58,19 @@ public class App {
             int race3index = r.nextInt(high - low) + low;
             int rannum = r.nextInt(high - low) + low;
             
+        
+         // creating an instance of Getdate and we are naming this instance mydate
+        Getdate mydate = new Getdate();
+        // calling the member function getDateString and saving it in s
+        String d = mydate.getDateString();
 
+    
             
        
         
         // choices menu
         void menu() {
-            System.out.println("Enter your selection below");
+            System.out.println("Welcom to Canyon Country Derby! Please make a selection");
             System.out.println("1. View Race 1 Schedule");
             System.out.println("2. View Race 2 Schedule");
             System.out.println("3. View Race 3 Schedule");
@@ -55,7 +82,7 @@ public class App {
             
             
                 if (selection == 1) {   
-                    System.out.println("Race 1:");
+                    System.out.println("Race 1:" + d);
                     for (int i=rannum; i<5; i++) {            
                     int sz = race1.length;
                     if (race1index >= sz) race1index = 0;
@@ -67,8 +94,8 @@ public class App {
                     // if (c == 'y') mood = 5;
                     
                 } else if (selection == 2) {
-                    System.out.println("Race 2:");
-                    for (int i=rannum; i<4; i++) {
+                    System.out.println("Race 2:" + d);
+                    for (int i=rannum; i<5; i++) {
                     int sz = race2.length;
                     if (race2index >= sz) race2index = 0;
                     System.out.println(race2[race2index]);
@@ -79,8 +106,8 @@ public class App {
                     // if (c == 'y') mood = 5;
                 
                 } else if (selection == 3) {
-                    System.out.println("Race 3:");
-                    for (int i=rannum; i<4; i++) {
+                    System.out.println("Race 3:" + d);
+                    for (int i=rannum; i<5; i++) {
                     int sz = race3.length;
                     if (race3index >= sz) race3index = 0;
                     System.out.println(race3[race3index]);
@@ -93,21 +120,21 @@ public class App {
 
                 } 
                 else if (selection == 4) {
-                    System.out.println("Race 1:");
+                    System.out.println("Race 1:" + d);
                     for (int i=rannum; i<5; i++) {            
                     int sz = race1.length;
                     if (race1index >= sz) race1index = 0;
                     System.out.println(race1[race1index]);
                     race1index++;
                     };
-                    System.out.println("Race 2:");
+                    System.out.println("Race 2:" + d);
                     for (int i=rannum; i<5; i++) {
                     int sz = race2.length;
                     if (race2index >= sz) race2index = 0;
                     System.out.println( race2[race2index]);
                     race2index++;
                     };
-                    System.out.println("Race 3:");
+                    System.out.println("Race 3:" + d);
                     for (int i=rannum; i<5; i++) {
                     int sz = race3.length;
                     if (race3index >= sz) race3index = 0;
@@ -122,16 +149,10 @@ public class App {
         int getselection() {
             return selection;
         }
-        // String getname() {
-        //     return name;
-        // }
     }
     public static void main(String[] args) throws Exception {
-        // System.out.println("This is the International Man of Mystery, Austin Powers. I'm here to help you get your mojo back. Yeah Baby!");
-        // System.out.print("So what's you name? ");
         Raceschedule selection1 = new Raceschedule();
-        // // creates a new instance
-        // Getgroove name2 = new Getgroove("Fred");
+
      
         
         
