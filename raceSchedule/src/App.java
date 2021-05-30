@@ -35,30 +35,20 @@ public class App {
             int race1index = r.nextInt(high - low) + low;
             int race2index = r.nextInt(high - low) + low;
             int race3index = r.nextInt(high - low) + low;
-            int loveindex = r.nextInt(high - low) + low;
             int rannum = r.nextInt(high - low) + low;
-            int rannum2 = r.nextInt(high - low) + low;
-            int rannum3 = r.nextInt(high - low) + low;
+            
 
             
-            String name;
-        
-        // Getgroove() {
-        //     name = s.next();
-        // }
-        
-        // Getgroove(String name) {
-        //     this.name = name;
-        // }
+       
         
         // choices menu
         void menu() {
-            System.out.println("What kind of mood are you in " + name + "?");
-            System.out.println("1. I'm feeling very bubblicious");
-            System.out.println("2. I want to breaking something tonight");
-            System.out.println("3. I'm crunchy peanut butter on toast");
-            System.out.println("4. I'm... uh... you know....");
-            System.out.println("5. Oh I'm already getting down with my bad self");
+            System.out.println("Enter your selection below");
+            System.out.println("1. View Race 1 Schedule");
+            System.out.println("2. View Race 2 Schedule");
+            System.out.println("3. View Race 2 Schedule");
+            System.out.println("4. View ALL Race Schedules");
+            System.out.println("5. Exit");
 
        
             mood = s.nextInt();
@@ -72,9 +62,9 @@ public class App {
                     System.out.println(race1[race1index]);
                     race1index++;
                     }
-                    System.out.println( name + ", are you ready to go to the mall and get the latest Tiger Beat? (y/n)");
-                    char c = s.next().charAt(0);
-                    if (c == 'y') mood = 5;
+                    // System.out.println(" are you ready to go to the mall and get the latest Tiger Beat? (y/n)");
+                    // char c = s.next().charAt(0);
+                    // if (c == 'y') mood = 5;
                     
                 } else if (mood == 2) {
                     System.out.println("Race 2:");
@@ -84,9 +74,9 @@ public class App {
                     System.out.println(race2[race2index]);
                     race2index++;
                     }
-                    System.out.println("Did that get out all your angsty teen anger out? (y/n)");
-                    char c = s.next().charAt(0);
-                    if (c == 'y') mood = 5;
+                    // System.out.println("Did that get out all your angsty teen anger out? (y/n)");
+                    // char c = s.next().charAt(0);
+                    // if (c == 'y') mood = 5;
                 
                 } else if (mood == 3) {
                     System.out.println("Race 3:");
@@ -97,9 +87,9 @@ public class App {
                     System.out.println(race3index);
                     race3index++;
                     }
-                    System.out.println("Are you all groovy now? (y/n)");
-                    char c = s.next().charAt(0);
-                    if (c == 'y') mood = 5;
+                    // System.out.println("Are you all groovy now? (y/n)");
+                    // char c = s.next().charAt(0);
+                    // if (c == 'y') mood = 5;
 
                 } 
                 else if (mood == 4) {
