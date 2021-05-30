@@ -6,10 +6,11 @@ public class App {
         Scanner s = new Scanner(System.in);
         int mood;
             String[] popSongs = {
-                "Britney Spears - Hit Me Baby One More Time (https://www.youtube.com/watch?v=C-u5WLJ9Yk4)",
-                "Michael Jackson - Billie Jean (https://www.youtube.com/watch?v=Zi_XLOBDo_Y)", 
-                "Madonna - Get Into The Groove (https://www.youtube.com/watch?v=52iW3lcpK5M)",
-                "*NSYNC - Bye Bye Bye (https://www.youtube.com/watch?v=Eo-KmOd3i7s)"
+                "Horse: Snowstorm\nJockey: Joey Buttafuoco\nWeight: 135lbs\n",
+                "Horse: Knee High\nJockey: Tonya Harding\nWeight: 128lbs\n", 
+                "Horse: Pants on Fire\nJockey: Ellis Philbuckle\nWeight: 131lbs\n",
+                "Horse: *NSYNC\nJockey: Lance Bass\nWeight: 138lbs\n",
+                "Horse: 5th Element\nJockey: Bruce Willis\nWeight: 133lbs\n"
             };
             String[] metalSongs = {
                 "Limp Bizkit - Break Stuff (https://www.youtube.com/watch?v=ZpUYjpKg9KY)",
@@ -64,10 +65,11 @@ public class App {
             
             
                 if (mood == 1) {   
-                    for (int i=0; i<3; i++) {            
+                    System.out.println("Race 1:");
+                    for (int i=0; i<4; i++) {            
                     int sz = popSongs.length;
                     if (popindex >= sz) popindex = 0;
-                    System.out.println("I like Oh My God you should totally listen to this " + popSongs[popindex]);
+                    System.out.println(popSongs[popindex]);
                     popindex++;
                     }
                     System.out.println( name + ", are you ready to go to the mall and get the latest Tiger Beat? (y/n)");
@@ -138,15 +140,5 @@ public class App {
         }
         System.out.println("Glad I could help you get your groove thang back!");
         
-    //     System.out.println("");
-        
-    //     System.out.println("Will you help " + name2.name + " get their groove back?");
-    //     while (name2.getmood() != 5) {
-    //         name2.menu();
-    //     }
-    //     System.out.println("Look at " + name2.name + " go! That's one jive turkey.");
-       
-
-    // }
     }
 }
