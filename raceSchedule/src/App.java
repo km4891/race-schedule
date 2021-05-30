@@ -42,6 +42,9 @@ public class App {
             int hippyindex = r.nextInt(high - low) + low;
             int loveindex = r.nextInt(high - low) + low;
             int rannum = r.nextInt(high - low) + low;
+            int rannum2 = r.nextInt(high - low) + low;
+            int rannum3 = r.nextInt(high - low) + low;
+
             
             String name;
         
@@ -66,7 +69,7 @@ public class App {
             mood = s.nextInt();
             
             
-                if (mood == 1 || mood == 4) {   
+                if (mood == 1) {   
                     System.out.println("Race 1:");
                     for (int i=rannum; i<5; i++) {            
                     int sz = popSongs.length;
@@ -78,7 +81,7 @@ public class App {
                     char c = s.next().charAt(0);
                     if (c == 'y') mood = 5;
                     
-                } else if (mood == 2 || mood == 4) {
+                } else if (mood == 2) {
                     System.out.println("Race 2:");
                     for (int i=rannum; i<4; i++) {
                     int sz = metalSongs.length;
@@ -90,7 +93,7 @@ public class App {
                     char c = s.next().charAt(0);
                     if (c == 'y') mood = 5;
                 
-                } else if (mood == 3 || mood == 4) {
+                } else if (mood == 3) {
                     System.out.println("Race 3:");
                     for (int i=rannum; i<4; i++) {
                     int sz = hippySongs.length;
@@ -104,16 +107,32 @@ public class App {
                     if (c == 'y') mood = 5;
 
                 } 
-                // else if (mood == 4) {
+                else if (mood == 4) {
+                    System.out.println("Race 1:");
+                    for (int i=rannum; i<5; i++) {            
+                    int sz = popSongs.length;
+                    if (popindex >= sz) popindex = 0;
+                    System.out.println(popSongs[popindex]);
+                    popindex++;
+                    };
+                    System.out.println("Race 2:");
+                    for (int i=rannum; i<4; i++) {
+                    int sz = metalSongs.length;
+                    if (metalindex >= sz) metalindex = 0;
+                    System.out.println( metalSongs[metalindex]);
+                    metalindex++;
+                    };
+                    System.out.println("Race 3:");
+                    for (int i=rannum; i<4; i++) {
+                    int sz = hippySongs.length;
+                    if (hippyindex >= sz) hippyindex = 0;
+                    System.out.println( hippySongs[hippyindex]);
+                    // System.out.println(hippyindex);
+                    hippyindex++;
+                }
+            }
 
-                //     int sz = loveSongs.length;
-                //     if (loveindex >= sz) loveindex = 0;
-                //     System.out.println("Light some candles and turn this on " + loveSongs[loveindex]);
-                //     loveindex++;
-
-                //     System.out.println("Do you need smoke after that? (y/n)");
-                //     char c = s.next().charAt(0);
-                //     if (c == 'y') mood = 5;
+               
             
                 // } else if (mood == 5)  {
                     
