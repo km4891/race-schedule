@@ -12,7 +12,7 @@ public class App {
                 "Horse: *NSYNC\nJockey: Lance Bass\nWeight: 138lbs\n",
                 "Horse: 5th Element\nJockey: Bruce Willis\nWeight: 133lbs\n"
             };
-            String[] metalSongs = {
+            String[] race2 = {
                 "Horse: Pulp N Slick\nJockey: AJ Shaw\nWeight: 129lbs\n",
                 "Horse: Peewee\nJockey: Paul Ruebens\nWeight: 137lbs\n", 
                 "Horse: Barnaby\nJockey: Peter Falk\nWeight: 132lbs\n",
@@ -33,7 +33,7 @@ public class App {
             int low = 1;
             int high = 5;
             int race1index = r.nextInt(high - low) + low;
-            int metalindex = r.nextInt(high - low) + low;
+            int race2index = r.nextInt(high - low) + low;
             int hippyindex = r.nextInt(high - low) + low;
             int loveindex = r.nextInt(high - low) + low;
             int rannum = r.nextInt(high - low) + low;
@@ -79,10 +79,10 @@ public class App {
                 } else if (mood == 2) {
                     System.out.println("Race 2:");
                     for (int i=rannum; i<4; i++) {
-                    int sz = metalSongs.length;
-                    if (metalindex >= sz) metalindex = 0;
-                    System.out.println("Ready to kill your ears and crank this to 11 " + metalSongs[metalindex]);
-                    metalindex++;
+                    int sz = race2.length;
+                    if (race2index >= sz) race2index = 0;
+                    System.out.println(race2[race2index]);
+                    race2index++;
                     }
                     System.out.println("Did that get out all your angsty teen anger out? (y/n)");
                     char c = s.next().charAt(0);
@@ -112,10 +112,10 @@ public class App {
                     };
                     System.out.println("Race 2:");
                     for (int i=rannum; i<5; i++) {
-                    int sz = metalSongs.length;
-                    if (metalindex >= sz) metalindex = 0;
-                    System.out.println( metalSongs[metalindex]);
-                    metalindex++;
+                    int sz = race2.length;
+                    if (race2index >= sz) race2index = 0;
+                    System.out.println( race2[race2index]);
+                    race2index++;
                     };
                     System.out.println("Race 3:");
                     for (int i=rannum; i<5; i++) {
