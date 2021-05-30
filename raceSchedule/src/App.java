@@ -5,7 +5,7 @@ public class App {
     public static class Raceschedule {
         Scanner s = new Scanner(System.in);
         int mood;
-            String[] popSongs = {
+            String[] race1 = {
                 "Horse: Snowstorm\nJockey: Joey Buttafuoco\nWeight: 135lbs\n",
                 "Horse: Knee High\nJockey: Tonya Harding\nWeight: 128lbs\n", 
                 "Horse: Pants on Fire\nJockey: Ellis Philbuckle\nWeight: 131lbs\n",
@@ -26,18 +26,13 @@ public class App {
                 "Horse: Pretzel Day\nJockey: Stanley Hudson\nWeight: 140lbs\n",
                 "Horse: Chili Con Carne\nJockey: Kevin Malone\nWeight: 132lbs\n" 
             };
-            String[] loveSongs = {
-                "Marvin Gaye - Let's Get It On (https://www.youtube.com/watch?v=9vAiESu5wrA)",
-                "Barry White - Can't Get Enough Of Your Love Baby (https://www.youtube.com/watch?v=WASXt0bcl6U)",
-                "Clarence Carter - Strokin' (https://www.youtube.com/watch?v=P7gMkiOPSeA)",
-                "Salt N Pepa - Push It (https://www.youtube.com/watch?v=vCadcBR95oU)"
-            };
+            
             
             // randomizes the solution given
             Random r = new Random();
             int low = 1;
             int high = 5;
-            int popindex = r.nextInt(high - low) + low;
+            int race1index = r.nextInt(high - low) + low;
             int metalindex = r.nextInt(high - low) + low;
             int hippyindex = r.nextInt(high - low) + low;
             int loveindex = r.nextInt(high - low) + low;
@@ -72,10 +67,10 @@ public class App {
                 if (mood == 1) {   
                     System.out.println("Race 1:");
                     for (int i=rannum; i<5; i++) {            
-                    int sz = popSongs.length;
-                    if (popindex >= sz) popindex = 0;
-                    System.out.println(popSongs[popindex]);
-                    popindex++;
+                    int sz = race1.length;
+                    if (race1index >= sz) race1index = 0;
+                    System.out.println(race1[race1index]);
+                    race1index++;
                     }
                     System.out.println( name + ", are you ready to go to the mall and get the latest Tiger Beat? (y/n)");
                     char c = s.next().charAt(0);
@@ -110,20 +105,20 @@ public class App {
                 else if (mood == 4) {
                     System.out.println("Race 1:");
                     for (int i=rannum; i<5; i++) {            
-                    int sz = popSongs.length;
-                    if (popindex >= sz) popindex = 0;
-                    System.out.println(popSongs[popindex]);
-                    popindex++;
+                    int sz = race1.length;
+                    if (race1index >= sz) race1index = 0;
+                    System.out.println(race1[race1index]);
+                    race1index++;
                     };
                     System.out.println("Race 2:");
-                    for (int i=rannum; i<4; i++) {
+                    for (int i=rannum; i<5; i++) {
                     int sz = metalSongs.length;
                     if (metalindex >= sz) metalindex = 0;
                     System.out.println( metalSongs[metalindex]);
                     metalindex++;
                     };
                     System.out.println("Race 3:");
-                    for (int i=rannum; i<4; i++) {
+                    for (int i=rannum; i<5; i++) {
                     int sz = hippySongs.length;
                     if (hippyindex >= sz) hippyindex = 0;
                     System.out.println( hippySongs[hippyindex]);
