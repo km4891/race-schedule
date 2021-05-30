@@ -13,10 +13,11 @@ public class App {
                 "Horse: 5th Element\nJockey: Bruce Willis\nWeight: 133lbs\n"
             };
             String[] metalSongs = {
-                "Limp Bizkit - Break Stuff (https://www.youtube.com/watch?v=ZpUYjpKg9KY)",
-                "Twisted Sister - We're Not Gonna Take It (https://www.youtube.com/watch?v=V9AbeALNVkk)",
-                "Black Sabbath - Iron Man (https://www.youtube.com/watch?v=5s7_WbiR79E)", 
-                "White Zombie - More Human Than Human (https://www.youtube.com/watch?v=E0E0ynyIUsg)" 
+                "Horse: Pulp N Slick\nJockey: AJ Shaw\nWeight: 129lbs\n",
+                "Horse: Peewee\nJockey: Paul Ruebens\nWeight: 137lbs\n", 
+                "Horse: Barnaby\nJockey: Peter Falk\nWeight: 132lbs\n",
+                "Horse: National Treasure\nJockey: Nic Cage\nWeight: 130lbs\n",
+                "Horse: Stargate\nJockey: Kurt Russell\nWeight: 135lbs\n" 
             };
             String[] hippySongs = {
                 "Jefferson Airplane - White Rabbit (https://www.youtube.com/watch?v=WANNqr-vcx0&)",
@@ -34,12 +35,12 @@ public class App {
             // randomizes the solution given
             Random r = new Random();
             int low = 1;
-            int high = 4;
+            int high = 5;
             int popindex = r.nextInt(high - low) + low;
             int metalindex = r.nextInt(high - low) + low;
             int hippyindex = r.nextInt(high - low) + low;
             int loveindex = r.nextInt(high - low) + low;
-           
+            int rannum = r.nextInt(high - low) + low;
             
             String name;
         
@@ -66,7 +67,7 @@ public class App {
             
                 if (mood == 1) {   
                     System.out.println("Race 1:");
-                    for (int i=0; i<4; i++) {            
+                    for (int i=rannum; i<4; i++) {            
                     int sz = popSongs.length;
                     if (popindex >= sz) popindex = 0;
                     System.out.println(popSongs[popindex]);
