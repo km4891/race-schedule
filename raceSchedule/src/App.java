@@ -19,7 +19,7 @@ public class App {
                 "Horse: National Treasure\nJockey: Nic Cage\nWeight: 130lbs\n",
                 "Horse: Stargate\nJockey: Kurt Russell\nWeight: 135lbs\n" 
             };
-            String[] hippySongs = {
+            String[] race3 = {
                 "Horse: Sandals\nJockey: Michael Scarn\nWeight: 136lbs\n",
                 "Horse: Philadelphia\nJockey: Jim Halpert\nWeight: 137lbs\n", 
                 "Horse: Motel Art\nJockey: Pam Beasley\nWeight: 127lbs\n",
@@ -34,7 +34,7 @@ public class App {
             int high = 5;
             int race1index = r.nextInt(high - low) + low;
             int race2index = r.nextInt(high - low) + low;
-            int hippyindex = r.nextInt(high - low) + low;
+            int race3index = r.nextInt(high - low) + low;
             int loveindex = r.nextInt(high - low) + low;
             int rannum = r.nextInt(high - low) + low;
             int rannum2 = r.nextInt(high - low) + low;
@@ -91,11 +91,11 @@ public class App {
                 } else if (mood == 3) {
                     System.out.println("Race 3:");
                     for (int i=rannum; i<4; i++) {
-                    int sz = hippySongs.length;
-                    if (hippyindex >= sz) hippyindex = 0;
-                    System.out.println("Turn on, Tune in, Drop out and listen to this " + hippySongs[hippyindex]);
-                    System.out.println(hippyindex);
-                    hippyindex++;
+                    int sz = race3.length;
+                    if (race3index >= sz) race3index = 0;
+                    System.out.println(race3[race3index]);
+                    System.out.println(race3index);
+                    race3index++;
                     }
                     System.out.println("Are you all groovy now? (y/n)");
                     char c = s.next().charAt(0);
@@ -119,11 +119,11 @@ public class App {
                     };
                     System.out.println("Race 3:");
                     for (int i=rannum; i<5; i++) {
-                    int sz = hippySongs.length;
-                    if (hippyindex >= sz) hippyindex = 0;
-                    System.out.println( hippySongs[hippyindex]);
+                    int sz = race3.length;
+                    if (race3index >= sz) race3index = 0;
+                    System.out.println(race3[race3index]);
                     // System.out.println(hippyindex);
-                    hippyindex++;
+                    race3index++;
                 }
             }
 
