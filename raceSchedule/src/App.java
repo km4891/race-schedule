@@ -20,10 +20,11 @@ public class App {
                 "Horse: Stargate\nJockey: Kurt Russell\nWeight: 135lbs\n" 
             };
             String[] hippySongs = {
-                "Jefferson Airplane - White Rabbit (https://www.youtube.com/watch?v=WANNqr-vcx0&)",
-                "Strawberry Alarm Clock - Peppermints & Incense (https://www.youtube.com/watch?v=4rw1_FNdy-Y)",
-                "Iron Butterfly - In-A-Gadda-Da-Vida (https://www.youtube.com/watch?v=UIVe-rZBcm4)",
-                "Jimi Hendrix - Purple Haze (https://www.youtube.com/watch?v=cJunCsrhJjg)"
+                "Horse: Sandals\nJockey: Michael Scarn\nWeight: 136lbs\n",
+                "Horse: Philadelphia\nJockey: Jim Halpert\nWeight: 137lbs\n", 
+                "Horse: Motel Art\nJockey: Pam Beasley\nWeight: 127lbs\n",
+                "Horse: Pretzel Day\nJockey: Stanley Hudson\nWeight: 140lbs\n",
+                "Horse: Chili Con Carne\nJockey: Kevin Malone\nWeight: 132lbs\n" 
             };
             String[] loveSongs = {
                 "Marvin Gaye - Let's Get It On (https://www.youtube.com/watch?v=9vAiESu5wrA)",
@@ -65,9 +66,9 @@ public class App {
             mood = s.nextInt();
             
             
-                if (mood == 1) {   
+                if (mood == 1 || mood == 4) {   
                     System.out.println("Race 1:");
-                    for (int i=rannum; i<4; i++) {            
+                    for (int i=rannum; i<5; i++) {            
                     int sz = popSongs.length;
                     if (popindex >= sz) popindex = 0;
                     System.out.println(popSongs[popindex]);
@@ -77,43 +78,46 @@ public class App {
                     char c = s.next().charAt(0);
                     if (c == 'y') mood = 5;
                     
-                } else if (mood == 2) {
-                    
+                } else if (mood == 2 || mood == 4) {
+                    System.out.println("Race 2:");
+                    for (int i=rannum; i<4; i++) {
                     int sz = metalSongs.length;
                     if (metalindex >= sz) metalindex = 0;
                     System.out.println("Ready to kill your ears and crank this to 11 " + metalSongs[metalindex]);
                     metalindex++;
-                    
+                    }
                     System.out.println("Did that get out all your angsty teen anger out? (y/n)");
                     char c = s.next().charAt(0);
                     if (c == 'y') mood = 5;
                 
-                } else if (mood == 3) {
-
+                } else if (mood == 3 || mood == 4) {
+                    System.out.println("Race 3:");
+                    for (int i=rannum; i<4; i++) {
                     int sz = hippySongs.length;
                     if (hippyindex >= sz) hippyindex = 0;
                     System.out.println("Turn on, Tune in, Drop out and listen to this " + hippySongs[hippyindex]);
                     System.out.println(hippyindex);
                     hippyindex++;
-
+                    }
                     System.out.println("Are you all groovy now? (y/n)");
                     char c = s.next().charAt(0);
                     if (c == 'y') mood = 5;
 
-                } else if (mood == 4) {
+                } 
+                // else if (mood == 4) {
 
-                    int sz = loveSongs.length;
-                    if (loveindex >= sz) loveindex = 0;
-                    System.out.println("Light some candles and turn this on " + loveSongs[loveindex]);
-                    loveindex++;
+                //     int sz = loveSongs.length;
+                //     if (loveindex >= sz) loveindex = 0;
+                //     System.out.println("Light some candles and turn this on " + loveSongs[loveindex]);
+                //     loveindex++;
 
-                    System.out.println("Do you need smoke after that? (y/n)");
-                    char c = s.next().charAt(0);
-                    if (c == 'y') mood = 5;
+                //     System.out.println("Do you need smoke after that? (y/n)");
+                //     char c = s.next().charAt(0);
+                //     if (c == 'y') mood = 5;
             
-                } else if (mood == 5)  {
+                // } else if (mood == 5)  {
                     
-                }
+                // }
             
             
         }
