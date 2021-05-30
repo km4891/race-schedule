@@ -4,7 +4,7 @@ public class App {
 
     public static class Raceschedule {
         Scanner s = new Scanner(System.in);
-        int mood;
+        int selection;
             String[] race1 = {
                 "Horse: Snowstorm\nJockey: Joey Buttafuoco\nWeight: 135lbs\n",
                 "Horse: Knee High\nJockey: Tonya Harding\nWeight: 128lbs\n", 
@@ -46,15 +46,15 @@ public class App {
             System.out.println("Enter your selection below");
             System.out.println("1. View Race 1 Schedule");
             System.out.println("2. View Race 2 Schedule");
-            System.out.println("3. View Race 2 Schedule");
+            System.out.println("3. View Race 3 Schedule");
             System.out.println("4. View ALL Race Schedules");
             System.out.println("5. Exit");
 
        
-            mood = s.nextInt();
+            selection = s.nextInt();
             
             
-                if (mood == 1) {   
+                if (selection == 1) {   
                     System.out.println("Race 1:");
                     for (int i=rannum; i<5; i++) {            
                     int sz = race1.length;
@@ -66,7 +66,7 @@ public class App {
                     // char c = s.next().charAt(0);
                     // if (c == 'y') mood = 5;
                     
-                } else if (mood == 2) {
+                } else if (selection == 2) {
                     System.out.println("Race 2:");
                     for (int i=rannum; i<4; i++) {
                     int sz = race2.length;
@@ -78,7 +78,7 @@ public class App {
                     // char c = s.next().charAt(0);
                     // if (c == 'y') mood = 5;
                 
-                } else if (mood == 3) {
+                } else if (selection == 3) {
                     System.out.println("Race 3:");
                     for (int i=rannum; i<4; i++) {
                     int sz = race3.length;
@@ -92,7 +92,7 @@ public class App {
                     // if (c == 'y') mood = 5;
 
                 } 
-                else if (mood == 4) {
+                else if (selection == 4) {
                     System.out.println("Race 1:");
                     for (int i=rannum; i<5; i++) {            
                     int sz = race1.length;
@@ -115,39 +115,32 @@ public class App {
                     // System.out.println(hippyindex);
                     race3index++;
                 }
-            }
-
-               
-            
-                // } else if (mood == 5)  {
-                    
-                // }
-            
+            }  
             
         }
         
-        int getmood() {
-            return mood;
+        int getselection() {
+            return selection;
         }
         // String getname() {
         //     return name;
         // }
     }
     public static void main(String[] args) throws Exception {
-        System.out.println("This is the International Man of Mystery, Austin Powers. I'm here to help you get your mojo back. Yeah Baby!");
+        // System.out.println("This is the International Man of Mystery, Austin Powers. I'm here to help you get your mojo back. Yeah Baby!");
         // System.out.print("So what's you name? ");
-        Raceschedule mood1 = new Raceschedule();
+        Raceschedule selection1 = new Raceschedule();
         // // creates a new instance
         // Getgroove name2 = new Getgroove("Fred");
      
         
         
         
-        System.out.println("make a selection");
-        while (mood1.getmood() != 5) {
-            mood1.menu();
+        // System.out.println("make a selection");
+        while (selection1.getselection() != 5) {
+            selection1.menu();
         }
-        System.out.println("Glad I could help you get your groove thang back!");
+        System.out.println("See you next time at Canyon Country Derby!");
         
     }
 }
