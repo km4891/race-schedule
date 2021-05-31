@@ -19,8 +19,7 @@ public class App {
                 DateFormat dateFormat = new SimpleDateFormat(FORMAT);
                 return dateFormat.format(date);
             }
-        }
-    
+        } 
 
 
     public static class Raceschedule {
@@ -82,31 +81,27 @@ public class App {
             
             
                 if (selection == 1) {   
-                    System.out.println("Race 1:" + d);
+                    System.out.println("Race 1: " + d);
                     for (int i=rannum; i<5; i++) {            
                     int sz = race1.length;
                     if (race1index >= sz) race1index = 0;
                     System.out.println(race1[race1index]);
                     race1index++;
                     }
-                    // System.out.println(" are you ready to go to the mall and get the latest Tiger Beat? (y/n)");
-                    // char c = s.next().charAt(0);
-                    // if (c == 'y') mood = 5;
+                    
                     
                 } else if (selection == 2) {
-                    System.out.println("Race 2:" + d);
+                    System.out.println("Race 2: " + d);
                     for (int i=rannum; i<5; i++) {
                     int sz = race2.length;
                     if (race2index >= sz) race2index = 0;
                     System.out.println(race2[race2index]);
                     race2index++;
                     }
-                    // System.out.println("Did that get out all your angsty teen anger out? (y/n)");
-                    // char c = s.next().charAt(0);
-                    // if (c == 'y') mood = 5;
+                    
                 
                 } else if (selection == 3) {
-                    System.out.println("Race 3:" + d);
+                    System.out.println("Race 3: " + d);
                     for (int i=rannum; i<5; i++) {
                     int sz = race3.length;
                     if (race3index >= sz) race3index = 0;
@@ -114,27 +109,25 @@ public class App {
                     System.out.println(race3index);
                     race3index++;
                     }
-                    // System.out.println("Are you all groovy now? (y/n)");
-                    // char c = s.next().charAt(0);
-                    // if (c == 'y') mood = 5;
+                    
 
                 } 
                 else if (selection == 4) {
-                    System.out.println("Race 1:" + d);
+                    System.out.println("Race 1: " + d);
                     for (int i=rannum; i<5; i++) {            
                     int sz = race1.length;
                     if (race1index >= sz) race1index = 0;
                     System.out.println(race1[race1index]);
                     race1index++;
                     };
-                    System.out.println("Race 2:" + d);
+                    System.out.println("Race 2: " + d);
                     for (int i=rannum; i<5; i++) {
                     int sz = race2.length;
                     if (race2index >= sz) race2index = 0;
                     System.out.println( race2[race2index]);
                     race2index++;
                     };
-                    System.out.println("Race 3:" + d);
+                    System.out.println("Race 3: " + d);
                     for (int i=rannum; i<5; i++) {
                     int sz = race3.length;
                     if (race3index >= sz) race3index = 0;
@@ -142,10 +135,8 @@ public class App {
                     // System.out.println(hippyindex);
                     race3index++;
                 }
-            }  
-            
+            }   
         }
-        
         int getselection() {
             return selection;
         }
