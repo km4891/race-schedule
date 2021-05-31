@@ -143,12 +143,8 @@ public class App {
     }
     public static void main(String[] args) throws Exception {
         Raceschedule selection1 = new Raceschedule();
-
-     
-        
-        
-        
-        // System.out.println("make a selection");
+           
+        // while loop keeps going until 5 is selected
         while (selection1.getselection() != 5) {
             selection1.menu();
         }
